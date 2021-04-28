@@ -8,6 +8,7 @@ const navBar = document.querySelector(".navbar__links");
 const navBarLinks = document.querySelectorAll(".navbar__links--link");
 
 navbarSquare.addEventListener("click", () => {
+  //   navbarSquare.classList.toggle("moveToLeft");
   lineMenu1.classList.toggle("change1");
   lineMenu2.classList.toggle("change2");
   lineMenu3.classList.toggle("change3");
