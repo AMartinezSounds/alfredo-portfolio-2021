@@ -167,7 +167,7 @@ ul {
 /* Title section */
 
 #section-main {
-  height: 93vh;
+  height: 100vh;
   position: relative;
 }
 
@@ -437,6 +437,9 @@ textarea {
 
 @media only screen and (max-height: 667px) {
   #section-main {
-    height: 100vh;
+    height: 91.5vh;
+  }
+  #section-main__get-in-touch {
+    margin-top: 3rem;
   }
 }
