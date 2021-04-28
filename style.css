@@ -434,3 +434,9 @@ textarea {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+
+@media only screen and (max-height: 667px) {
+  #section-main {
+    height: 100vh;
+  }
+}
