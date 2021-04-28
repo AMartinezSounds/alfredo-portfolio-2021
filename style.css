@@ -268,11 +268,13 @@ ul {
   margin-top: 3rem;
   display: flex;
   justify-content: center;
+  max-height: 180px;
 }
 
 #my-photo {
   border-radius: 30%;
   width: 150px;
+  max-height: 180px;
 }
 
 .section-about__myDescription {
