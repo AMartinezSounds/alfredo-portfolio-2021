@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 
-* {
+*,
+*:before,
+*:after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -22,6 +24,10 @@ body {
       rgba(0, 0, 0, 0.25) 200%
     );
   background-blend-mode: multiply;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 a {
@@ -63,7 +69,7 @@ ul {
   position: relative;
 }
 
-#navbar__lines {
+.navbar__lines {
   height: 6rem;
   width: 6rem;
   display: flex;
@@ -75,7 +81,7 @@ ul {
   top: 2px;
   right: 2px;
   border: solid 0.1rem;
-  border-color: black;
+  border-color: white;
   transition: all 0.4s ease-in-out;
 }
 
@@ -83,8 +89,8 @@ ul {
   margin-right: 12.5rem;
 }
 
-#lines__line-1 {
-  background-color: black;
+.lines__line-1 {
+  background-color: white;
   height: 0.1rem;
   width: 2.5rem;
   margin-top: -1rem;
@@ -92,8 +98,8 @@ ul {
   transition: all 0.4s ease-in-out;
 }
 
-#lines__line-2 {
-  background-color: black;
+.lines__line-2 {
+  background-color: white;
   height: 0.1rem;
   width: 2.5rem;
   margin-top: -1rem;
@@ -101,8 +107,8 @@ ul {
   transition: opacity 0.3s ease-in-out;
 }
 
-#lines__line-3 {
-  background-color: black;
+.lines__line-3 {
+  background-color: white;
   height: 0.1rem;
   width: 2.5rem;
   margin-top: -1rem;
@@ -122,6 +128,10 @@ ul {
 .change3 {
   transform-origin: 0;
   transform: scaleY(1.2) translate(0.2rem, 0) rotate(-40deg);
+}
+
+.line-black {
+  background-color: black;
 }
 
 .navbar__links {
@@ -149,11 +159,6 @@ ul {
   margin-left: 2rem;
   font-size: 2rem;
   letter-spacing: 0.2rem;
-}
-
-.navbar__links--link a {
-  color: black;
-  transition: border-bottom 2s ease-in;
 }
 
 #navbar__title {
@@ -205,12 +210,6 @@ ul {
   left: 2rem;
   margin-top: 6rem;
   letter-spacing: 0.2rem;
-}
-
-#section-main-position__getInTouch {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
 }
 
 #adeptIn {
@@ -439,24 +438,199 @@ textarea {
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-height: 667px) {
+/* medias queries iphone 6/7/8*/
+
+@media only screen and (max-width: 375px) and (max-height: 667px) {
   #section-main {
-    height: 91.5vh;
+    height: 100vh;
   }
   #section-main__get-in-touch {
     margin-top: 3rem;
   }
 }
 
-@media only screen and (max-width: 321px) {
-  #navbar__lines {
+/* Media queries iphone 6/7/8 Plus */
+
+/* @media only screen and (max-width: 414px) {
+  #section-main__get-in-touch {
+    margin-left: 8rem;
+    margin-right: 7rem;
+  }
+} */
+
+@media only screen and (min-width: 1024px) {
+  #navbar {
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+  }
+  .navbar__lines:hover {
+    cursor: pointer;
+  }
+  .navbar__links {
+    position: fixed;
+    top: 0px;
+    right: -65px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar__links--link {
+    position: relative;
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    margin-left: 0;
+    transition: all 1.3s ease-in-out;
+  }
+  .navbar__links--link:after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 2px;
+    width: 0;
+    left: 0px;
+    bottom: -7px;
+    transition: 0.3s ease-out;
+  }
+  .navbar__links--link:hover:after {
+    width: 100%;
+  }
+  #navbar__title {
+    margin-left: 0;
+    font-size: 4rem;
+  }
+
+  #section-main-myname {
+    position: static;
+    display: flex;
+    height: 10rem;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    font-size: 8rem;
+  }
+
+  #section-main-myname #alfredo {
+    position: static;
+  }
+
+  #section-main-myname #martinez {
+    position: static;
+  }
+
+  #section-main-myname #alfredo span {
+    font-size: 13rem;
+  }
+
+  #section-main-myname #martinez span {
+    font-size: 13rem;
+  }
+
+  #section-main-position {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #section-main-position__getInTouch {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #section-main-position__getInTouch p {
+    text-align: center;
+    color: white;
+  }
+
+  #adeptIn {
+    margin-top: 6rem;
+    text-align: center;
+    font-size: 2.2rem;
+  }
+
+  #technologies {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #technologies i {
+    font-size: 6rem;
+  }
+
+  #section-main__get-in-touch {
+    font-size: 2.8rem;
+    margin-left: 61rem;
+    margin-right: 61rem;
+    margin-top: 12rem;
+    cursor: pointer;
+  }
+
+  #section-about {
+    height: 100vh;
+  }
+
+  .section-about__myDescription {
+    text-align: justify;
+    margin-left: 20rem;
+    margin-right: 20rem;
+  }
+  #section-about__get-in-touch {
+    background-color: transparent;
+    outline: transparent;
+    color: white;
+    font-size: 2.8rem;
+    border: solid 2px white;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    padding: 1rem 6rem;
+    cursor: pointer;
+  }
+}
+
+/*PIXEL 2 xl media queries*/
+
+/* @media only screen and (max-height: 823px) and (max-width: 411px) {
+  #section-main-position {
+    left: 4.5rem;
+  }
+
+  #section-main__get-in-touch {
+    margin-top: 12rem;
+    font-size: 2.5rem;
+  }
+  #technologies {
+    margin-left: 1rem;
+  }
+
+  #portfolio-section__title {
+    margin-top: -1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 4rem;
+    color: white;
+  }
+
+  #section-about__get-in-touch {
+    font-size: 2.5rem;
+  }
+} */
+
+/*Media queries iphone se*/
+
+@media only screen and (max-width: 320px) and (max-height: 568px) {
+  .navbar__lines {
     width: 5.4rem;
     height: 5.4rem;
   }
-
-  /* .moveToLeft {
-    margin-right: 10.4rem;
-  } */
 
   .navbar__links--link {
     margin-top: 4rem;
@@ -550,7 +724,9 @@ textarea {
   }
 }
 
-@media only screen and (max-height: 640px) and (max-width: 361px) {
+/* media queries moto g4 */
+
+/* @media only screen and (max-height: 640px) and (max-width: 360px) {
   #section-main-position {
     top: 16rem;
   }
@@ -561,4 +737,11 @@ textarea {
     margin-left: 5rem;
     margin-right: 5rem;
   }
-}
+  #section-main__get-in-touch {
+    margin-top: 6rem;
+    font-size: 2.5rem;
+  }
+  #section-about__get-in-touch {
+    font-size: 2.5rem;
+  }
+} */
