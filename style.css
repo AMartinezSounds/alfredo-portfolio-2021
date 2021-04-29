@@ -212,6 +212,17 @@ ul {
   letter-spacing: 0.2rem;
 }
 
+#section-main-position__getInTouch {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#section-main-position__getInTouch p {
+  text-align: center;
+  color: white;
+}
+
 #adeptIn {
   margin-top: 6rem;
   text-align: center;
@@ -239,6 +250,7 @@ ul {
   margin-left: 7rem;
   margin-right: 7rem;
   padding: 1rem;
+  min-width: 21rem;
 }
 
 .separation {
@@ -255,8 +267,6 @@ ul {
 }
 
 #section-about__title {
-  margin-left: 10rem;
-  margin-right: 10rem;
   margin-top: 2rem;
   text-align: center;
   font-size: 2.5rem;
@@ -567,8 +577,8 @@ textarea {
 
   #section-main__get-in-touch {
     font-size: 2.8rem;
-    margin-left: 61rem;
-    margin-right: 61rem;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 12rem;
     cursor: pointer;
   }
@@ -610,34 +620,124 @@ textarea {
     justify-content: space-evenly;
     align-items: center;
   }
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  #contact-form label {
+    margin-top: 3rem;
+  }
+  #contact-form input,
+  textarea {
+    margin-top: 1rem;
+  }
+  #contact-form button {
+    margin: 2rem 20rem;
+    cursor: pointer;
+  }
+  #download-btn button {
+    cursor: pointer;
+  }
 }
 
-/*PIXEL 2 xl media queries*/
+/*    Ipad Pro queries      */
 
-/* @media only screen and (max-height: 823px) and (max-width: 411px) {
+@media screen and (width: 1024px) and (max-height: 1366px) {
+  #section-main-myname {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  #alfredo {
+    padding-left: 7rem;
+  }
   #section-main-position {
-    left: 4.5rem;
+    height: 81%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
-
-  #section-main__get-in-touch {
-    margin-top: 12rem;
+  #section-main-position__getInTouch > p {
+    font-size: 6rem;
+  }
+  #section-main-position__getInTouch #adeptIn {
+    font-size: 4rem;
+  }
+  #section-about__title {
+    font-size: 6rem;
+  }
+  .section-about__myDescription {
     font-size: 2.5rem;
-  }
-  #technologies {
-    margin-left: 1rem;
+    line-height: 4rem;
   }
 
   #portfolio-section__title {
-    margin-top: -1.5rem;
-    margin-bottom: 1.5rem;
-    font-size: 4rem;
+    margin-bottom: 0rem;
+    font-size: 6rem;
     color: white;
   }
 
-  #section-about__get-in-touch {
+  #portfolio-showcase-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .project {
+    width: 25rem;
+    height: 30rem;
+    background-color: white;
+    margin-bottom: 3rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact-title {
+    font-size: 7rem;
+  }
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 74vh;
+    margin: auto;
+    max-width: 70%;
+  }
+
+  #contact-form label {
+    color: white;
+    font-size: 3.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  #contact-form input,
+  textarea {
     font-size: 2.5rem;
   }
-} */
+
+  #contact-form button {
+    margin: 2rem 10rem;
+    font-size: 2.3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  #footer p {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
 
 /*Media queries iphone se*/
 
@@ -728,6 +828,38 @@ textarea {
     padding-bottom: 1rem;
     background-color: transparent;
   }
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #contact-form label {
+    color: white;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #contact-form input,
+  textarea {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+    font-size: 2rem;
+  }
+
+  #contact-form button {
+    margin: 2rem 10rem;
+    font-size: 2.3rem;
+    color: white;
+    border: solid 1px white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: transparent;
+  }
+
   #contact-form button {
     margin: 2rem 8rem;
     font-size: 2.3rem;
