@@ -20,3 +20,48 @@ navbarSquare.addEventListener("click", () => {
   lineMenu1.classList.toggle("line-black");
   lineMenu3.classList.toggle("line-black");
 });
+
+function smoothScroll(target, duration) {
+  let targetToGo = document.querySelector(target);
+  let targetPosition = targetToGo.offsetTop;
+  let startPosition = window.pageYOffset;
+  let distance = targetPosition - startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    let timeElapsed = currentTime - startTime;
+    let run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function ease(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  }
+  requestAnimationFrame(animation);
+}
+
+const navbarContact = document.querySelector("#navbar-contact");
+
+navbarContact.addEventListener("click", function (e) {
+  e.preventDefault();
+  smoothScroll("#contact-section", 1000);
+});
+
+const contactButton = document.querySelector(".contact-button");
+
+contactButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  smoothScroll("#contact-section", 1000);
+});
+
+const contactButton2 = document.querySelector(".contact-button2");
+
+contactButton2.addEventListener("click", (e) => {
+  e.preventDefault();
+  smoothScroll("#contact-section", 1000);
+});
