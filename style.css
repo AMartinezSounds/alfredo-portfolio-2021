@@ -448,8 +448,8 @@ ul {
 .layout {
   visibility: hidden;
   background-color: rgb(255, 255, 255, 0.9);
-  position: absolute;
-  top: 187rem;
+  position: fixed;
+  top: 0;
   height: 100vh;
   width: 100%;
   z-index: 4;
@@ -457,13 +457,15 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  overflow-y: scroll;
 }
 
 .layout p {
+  text-align: justify;
   color: black;
-  width: 75%;
-  font-size: 2.3rem;
-  line-height: 1.5;
+  width: 80%;
+  font-size: 2rem;
+  line-height: 1.2;
 }
 
 .layout img {
