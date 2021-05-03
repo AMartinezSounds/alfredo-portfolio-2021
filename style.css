@@ -607,6 +607,13 @@ textarea:focus {
   #section-main__get-in-touch {
     margin-top: 3rem;
   }
+  .layout p {
+    font-size: 1.8rem;
+    width: 85%;
+  }
+  .layout img {
+    width: 250px;
+  }
 }
 
 /* Media queries for big screens */
