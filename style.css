@@ -70,6 +70,39 @@ ul {
   transform: scale(1.3) rotateZ(360deg);
 }
 
+.github-icon {
+  font-size: 4.5rem;
+  transition: all 0.2s;
+}
+
+.github-icon:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.window-close-btn {
+  font-size: 4.5rem;
+  color: #ee4d26;
+  transition: all 0.3s;
+}
+
+.window-close-btn:hover {
+  color: hsl(12, 85%, 44%);
+  cursor: pointer;
+}
+
+.go-to-project-btn {
+  font-size: 4.5rem;
+  color: hsl(110, 84%, 53%);
+  transition: all 0.3s;
+}
+
+.go-to-project-btn:hover {
+  color: hsl(110, 84%, 33%);
+  transform: scaleX(1.1);
+  cursor: pointer;
+}
+
 /* Nav bar */
 
 #navbar {
@@ -363,6 +396,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 #portfolio-section__title {
@@ -409,6 +443,43 @@ ul {
 .project i {
   margin-top: 2rem;
   font-size: 4rem;
+}
+
+.layout {
+  visibility: hidden;
+  background-color: rgb(255, 255, 255, 0.9);
+  position: absolute;
+  top: 187rem;
+  height: 100vh;
+  width: 100%;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.layout p {
+  color: black;
+  width: 75%;
+  font-size: 2.3rem;
+  line-height: 1.5;
+}
+
+.layout img {
+  width: 300px;
+}
+
+.layout-buttons {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.show-the-layout {
+  visibility: visible;
 }
 
 #contact-section {
