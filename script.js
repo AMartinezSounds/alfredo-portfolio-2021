@@ -7,6 +7,8 @@ const lineMenu3 = document.querySelector(".lines__line-3");
 const navBar = document.querySelector(".navbar__links");
 const navBarLinks = document.querySelectorAll(".navbar__links--link");
 
+// Event Listeners for menu animations
+
 navbarSquare.addEventListener("click", () => {
   //   navbarSquare.classList.toggle("moveToLeft");
   lineMenu1.classList.toggle("change1");
@@ -20,6 +22,8 @@ navbarSquare.addEventListener("click", () => {
   lineMenu1.classList.toggle("line-black");
   lineMenu3.classList.toggle("line-black");
 });
+
+// function for smooth scrolling
 
 function smoothScroll(target, duration) {
   let targetToGo = document.querySelector(target);
@@ -45,6 +49,8 @@ function smoothScroll(target, duration) {
   requestAnimationFrame(animation);
 }
 
+// Implementing the smooth scrolling in each element
+
 const navbarContact = document.querySelector("#navbar-contact");
 
 navbarContact.addEventListener("click", function (e) {
@@ -64,4 +70,22 @@ const contactButton2 = document.querySelector(".contact-button2");
 contactButton2.addEventListener("click", (e) => {
   e.preventDefault();
   smoothScroll("#contact-section", 1000);
+});
+
+const navbarHome = document.querySelector("#navbar-home");
+
+navbarHome.addEventListener("click", () => {
+  smoothScroll("#section-main", 1000);
+});
+
+const navbarAbout = document.querySelector("#navbar-about");
+
+navbarAbout.addEventListener("click", () => {
+  smoothScroll("#section-about", 1000);
+});
+
+const navbarPortfolio = document.querySelector("#navbar-portfolio");
+
+navbarPortfolio.addEventListener("click", () => {
+  smoothScroll("#portfolio-section", 1000);
 });
