@@ -89,17 +89,3 @@ const navbarPortfolio = document.querySelector("#navbar-portfolio");
 navbarPortfolio.addEventListener("click", () => {
   smoothScroll("#portfolio-section", 1000);
 });
-
-// Layout interactivity
-
-const layout = document.querySelector(".layout");
-const showWindow = document.querySelector(".info-icon");
-const closeWindow = document.querySelector(".window-close-btn");
-
-showWindow.addEventListener("click", () => {
-  layout.classList.add("show-the-layout");
-});
-
-closeWindow.addEventListener("click", () => {
-  layout.classList.remove("show-the-layout");
-});
